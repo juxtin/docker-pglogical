@@ -1,0 +1,13 @@
+version: "2"
+
+services:
+  primary:
+    build: ./pg
+    container_name: pglogical
+    networks:
+      - dockernet
+    ports:
+      - "5432:5432"
+networks:
+  dockernet:
+    driver: bridge
